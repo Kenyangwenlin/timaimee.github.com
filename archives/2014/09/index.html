@@ -10,7 +10,7 @@
   <link rel="apple-touch-startup-image" href="/icon.jpg">
 
   
-  <title>TimAimee</title>
+  <title>归档：2014/9 | TimAimee</title>
   <meta name="author" content="TimAimee">
   
   
@@ -114,31 +114,16 @@ alert("Please Update Your IE \n请升级您的IE浏览器");
   <div id="content" class="inner">
     <p id="header-fix"></p>
     <div id="main-col" class="alignright"><div id="wrapper">
-  <div class="archive titlelist">
+<h2 class="archive-title">2014/9</h2>
+
+
+  
     <article class="post">
-      <div class="post-content animated fadeIn">
-        <header>
-            
-              <div class="icon depth"><a href="/2014/09/21/bigger/"> </a></div>
-              <h2 class="depth title" ><a class="animated" href="/2014/09/21/bigger/">做一个有逼格的开发者</a></h2>
-            
-            <time class="time title depth" datetime="2014-09-21T02:41:30.000Z">9月 21 2014</time>
-          </header>
-      </div>
-    </article>
-  </div>
-
-
-
-
-  <div class="animated fadeIn" idplus="做一个有逼格的开发者" style="display: none;">
-    <div idplusp="做一个有逼格的开发者">
-      <article class="post">
   
     <div class="gallery">
   <div class="photoset">
     
-      <img s1c="">
+      <img src="">
     
   </div>
   <div class="control">
@@ -155,7 +140,7 @@ alert("Please Update Your IE \n请升级您的IE浏览器");
       
       
   
-    <h1 class="depth title">做一个有逼格的开发者</h1>
+    <h1 class="title depth"><a href="/2014/09/21/bigger/">做一个有逼格的开发者</a></h1>
   
 
     </header>
@@ -169,12 +154,6 @@ alert("Please Update Your IE \n请升级您的IE浏览器");
       
         
         
-  
-  <div class="tags">
-    <a href="/tags/逼格/">逼格</a>
-  </div>
-
-        
       
       <div class="clearfix"></div>
     </footer>
@@ -183,102 +162,9 @@ alert("Please Update Your IE \n请升级您的IE浏览器");
 
 
 
-      
-    </div>
-  </div>
-
-
-
-
-
-<div id="myCanvasContainer" class="animated fadeIn" style="display: none;">
- <canvas width="500" height="500" id="myCanvas">
- <ul>
   
-    <li><h2><a href="/tags/逼格/">逼格</a></h2></li>
-  
-  </ul>
- </canvas>
-</div>
- 
 
-
-  <script>
-  $(".archive").click(function (e) {
-      if ($("title").text().indexOf( "TimAimee" )>=0 ){
-          if (e.target.href){
-              $(".animated:contains(\'"+e.target.text+"\')").addClass("bounceOut");
-              setTimeout(function(){
-                  var pageTitle=e.target.text;
-                  loadpage(pageTitle);
-                  $(".animated:contains(\'"+e.target.text+"\')").removeClass("bounceOut");
-                  history.pushState( pageTitle, $("title").text(), e.target.href);
-              }, 500);
-          }
-      }
-      return false;
-  });
-  </script>
-  <script>
-  $(".backtohome").click(function (e) {
-      if ($("title").text() != "TimAimee"){
-          //go back to home
-          setTimeout(function(){
-              loadpage();
-              history.pushState( null, $("title").text(), "/");
-          }, 150);
-      } else {
-          //go to tag cloud
-          loadpage("#tag");
-          history.pushState( "#tag", $("title").text(), "#tag");
-      }
-      return false;
-  });
-  </script>
-
-  <script>
-  function loadpage(pageTitle) {
-      scroll(0,0);
-      if ( !pageTitle ){
-          //home
-          $('#myCanvasContainer').css("display","none");
-          $("title").text("TimAimee");
-          $("[idplus]").css("display","none");
-          $(".titlelist").css("display","");
-      } else if ( pageTitle.indexOf("#tag")>=0 ) {
-          //tagcloud
-          $('#myCanvasContainer').css("display","");
-          $("[idplus]").css("display","none");
-          $(".titlelist").css("display","none");
-          $("title").text("Tag Cloud | TimAimee");
-      } else {
-          //pages
-          $('#myCanvasContainer').css("display","none");
-          $("title").text(pageTitle + " | TimAimee");
-          var pageIDplus=pageTitle.replace(/\s+/g,"")
-          $(".titlelist").css("display","none");
-          $("[idplus=\'" + pageIDplus +"\']" ).css("display","");
-          $("[idplusp=\'" + pageIDplus +"\']" ).replaceWith($("[idplus=\'" + pageIDplus +"\']").html().replace(/img\ s1c/g, "img src"));
-      }
-  };
-  </script>
-  <script>
-  window.addEventListener('popstate', function(e) {
-      if (location.href.indexOf("#comment") > 0){
-          location.reload();
-      }else {
-          loadpage(e.state);
-      }
-      },false);
-  </script>
-  <script>
-
-  </script>
-
-
-
-
-<nav id="pagination" class="titlelist">
+  <nav id="pagination" class="titlelist">
   
   
   <div class="clearfix"></div>
